@@ -1,0 +1,9 @@
+name,{#idol.name},{#1}
+unit.name,{#idol.unit},{#1}
+birthDay,{#idol.birthDay},{#1}
+starSign,{#idol.starSign},{#1}
+arm,{#idol.arm},{#1}
+place,{#idol.place},{#1}
+hobby,{#idol.hobby},{#1}
+specialty,{#idol.specialty},{#1}
+characterVoice,{#idol.voiceActor},{#1}
