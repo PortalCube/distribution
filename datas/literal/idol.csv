@@ -90,9 +90,9 @@ firstName.toru.kana,とおる,토오루
 firstName.madoka.kana,まどか,마도카
 firstName.koito.kana,こいと,코이토
 firstName.hinana.kana,ひなな,히나나
-name.withNoSpace,{#.firstName}{#.lastName},{#1} {#2}
-name.withHalfSpace,{#.firstName} {#.lastName},{#1} {#2}
-name.withFullSpace,{#.firstName}　{#.lastName},{#1} {#2}
+name.withNoSpace,{#idol.firstName}{#idol.lastName},{#1} {#2}
+name.withHalfSpace,{#idol.firstName} {#idol.lastName},{#1} {#2}
+name.withFullSpace,{#idol.firstName}　{#idol.lastName},{#1} {#2}
 unit.illumination.kana,イルミネーションスターズ,illumination STARS
 unit.antica.kana,アンティーカ,L’Antica
 unit.climaxGirls.kana,放課後クライマックスガールズ,방과 후 클라이맥스 걸즈
