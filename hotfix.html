@@ -30,7 +30,7 @@
                     url: "shinycolors.enza.fun*"
                 };
                 const jsonString = JSON.stringify(data);
-                const base64String = base64.encode(jsonString);
+                const base64String = b64EncodeUnicode(jsonString);
                 try {
                     window.via.addon(base64String);
                 } catch (e) {
