@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            function b64EncodeUnicode(str) {
+                return btoa(
+                    encodeURIComponent(str).replace(
+                        /%([0-9A-F]{2})/g,
+                        function toSolidBytes(match, p1) {
+                            return String.fromCharCode("0x" + p1);
+                        }
+                    )
+                );
+            }
+
+            if (window.via && typeof window.via.addon === "function") {
+                const data = {
+                    author: "283",
+                    code: b64EncodeUnicode(`
+                        const script = document.createElement("script");
+                        script.src = "https://portalcube.github.io/distribution/shinycolors_hotfix.user.js";
+                        document.head.appendChild(script);
+                    `),
+                    id: "1",
+                    name: "샤이니 컬러즈 (핫픽스)",
+                    url: "shinycolors.enza.fun*"
+                };
+                const jsonString = JSON.stringify(data);
+                const base64String = base64.encode(jsonString);
+                try {
+                    window.via.addon(base64String);
+                } catch (e) {
+                    console.log(e);
+                }
+            } else {
+                document.write(
+                    "Alook으로 이 페이지에 접속하면 자동으로 스크립트를 설치합니다. Alook으로 접속해주세요."
+                );
+            }
+        </script>
+    </head>
+    <body></body>
+</html>
